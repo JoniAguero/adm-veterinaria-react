@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Header } from './components/Header';
 import { Formulario } from './components/Formulario';
+import { ListarCitas } from './components/ListarCitas';
 
 class App extends Component {
 
@@ -29,11 +30,11 @@ class App extends Component {
         <Header />
         <div className="container-fluid">
           <div className="row">
-            <div className="col">
+            <div className="col-md-6">
               <Formulario agregarCita={this.agregarCita} />
             </div>
-            <div className="col">
-              
+            <div className="col-md-6">
+              <ListarCitas citas={this.state.citas} />
             </div>
           </div>
         </div>
