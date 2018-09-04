@@ -3,16 +3,22 @@ import { Header } from './components/Header';
 import { Formulario } from './components/Formulario';
 
 class App extends Component {
+
+
+  agregarCita = (datos) => {
+    console.log(datos);
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
         <div className="container-fluid">
-          <div class="row">
-            <div class="col">
-              <Formulario />
+          <div className="row">
+            <div className="col">
+              <Formulario agregarCita={this.agregarCita} />
             </div>
-            <div class="col">
+            <div className="col">
               
             </div>
           </div>
