@@ -4,9 +4,23 @@ import { Formulario } from './components/Formulario';
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
 
-  agregarCita = (datos) => {
-    console.log(datos);
+    this.state = {
+      citas: {}
+    }
+
+  }
+
+  agregarCita = (cita) => {
+    const citas = { ...this.state.citas };
+
+    citas[`cita${Date.now()}`] = cita;
+
+    this.setState({
+      citas
+    })
   }
 
   render() {
