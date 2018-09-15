@@ -76,4 +76,4 @@ export class Formulario extends Component {
     }
 }
 
-export default Formulario
+export default Formulario;

@@ -10,7 +10,10 @@ export class ListarCitas extends Component {
                     <h2 className="card-title text-center"> Administra tus citas aquí </h2>
                     <div className="lista-citas">
                         {Object.keys(this.props.citas).map(cita => (
-                            <Cita key={cita} info={this.props.citas[cita]}/>
+                            <Cita key={cita}
+                                  idCita={cita} 
+                                  info={this.props.citas[cita]} 
+                                  borrarCita={this.props.borrarCita}/>
                         ))}
                     </div>
                 </div>
@@ -20,4 +23,4 @@ export class ListarCitas extends Component {
   }
 }
 
-export default ListarCitas
+export default ListarCitas;

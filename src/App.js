@@ -24,6 +24,21 @@ class App extends Component {
     })
   }
 
+  borrarCita = (id) => {
+
+    //Creacmos copia de State citas
+    const citas = { ...this.state.citas };
+
+    //Eliminados por id
+    delete citas[id];
+
+    //Actualizamos state
+    this.setState({
+      citas 
+    })
+
+  }
+
   render() {
     return (
       <div className="App">
@@ -34,7 +49,8 @@ class App extends Component {
               <Formulario agregarCita={this.agregarCita} />
             </div>
             <div className="col-md-6">
-              <ListarCitas citas={this.state.citas} />
+              <ListarCitas citas={this.state.citas} 
+                borrarCita={this.borrarCita}/>
             </div>
           </div>
         </div>
